@@ -2,27 +2,35 @@
 <html ng-app>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="player.js"></script>
   </head>
   <body>
 
-    <div ng-controller="PlayerCtrl">
-      <p>{{points}}</p>
-      <p>{{name}}</p>
-      <button ng-click="addOne()">+1</button>
-      <button ng-click="addFive()">+5</button>
-      <button ng-click="subtractOne()">-1</button>
-      <button ng-click="subtractFive()">-5</button>
+    <div ng-controller="PlayersCtrl">
+      <button ng-click="reset()">Reset</button>
+
+      <div ng-controller="PlayerCtrl">
+        <p>{{points}}</p>
+        <p>{{name}}</p>
+        <button ng-click="addOne()">+1</button>
+        <button ng-click="addFive()">+5</button>
+        <button ng-click="subtractOne()">-1</button>
+        <button ng-click="subtractFive()">-5</button>
+      </div>
+
+      <div ng-controller="PlayerCtrl">
+        <p>{{points}}</p>
+        <p>{{name}}</p>
+        <button ng-click="addOne()">+1</button>
+        <button ng-click="addFive()">+5</button>
+        <button ng-click="subtractOne()">-1</button>
+        <button ng-click="subtractFive()">-5</button>
+      </div>
+
     </div>
 
-    <div ng-controller="PlayerCtrl">
-      <p>{{points}}</p>
-      <p>{{name}}</p>
-      <button ng-click="addOne()">+1</button>
-      <button ng-click="addFive()">+5</button>
-      <button ng-click="subtractOne()">-1</button>
-      <button ng-click="subtractFive()">-5</button>
-    </div>
+
+    <script src="player.js"></script>
+    <script src="players.js"></script>
 
   </body>
 </html>
