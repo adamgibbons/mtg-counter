@@ -1,4 +1,5 @@
 function PlayerCtrl($scope) {
+  $scope.editing = false;
   $scope.name = 'Player';
   $scope.points = 20;
 
@@ -16,6 +17,14 @@ function PlayerCtrl($scope) {
 
   $scope.subtractFive = function() {
     $scope.points -= 5;
+  }
+
+  $scope.save = function() {
+    $scope.editing = false;
+  }
+
+  $scope.edit = function() {
+    $scope.editing = true;
   }
 
   $scope.$on('reset', function(){
