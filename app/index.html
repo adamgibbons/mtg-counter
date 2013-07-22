@@ -12,43 +12,49 @@
   </head>
   <body>
 
-    <div class="container-fluid">
-      <div ng-controller="PlayersCtrl" class="row-fluid">
+    <div class="container-fluid" ng-controller="PlayersCtrl">
+      <div class="row-fluid">
 
-        <div ng-controller="PlayerCtrl" class="span5 player" id="left-player">
+        <div ng-controller="PlayerCtrl" class="span6 player" id="left-player">
+
+          <img src="./img/player-1.jpg" class="img-rounded">
 
           <form class="form-inline" ng-show="editing">
             <input type="text" ng-model="name">
-            <button ng-click="save()" class="btn">Save</button>
+            <button ng-click="save()" class="btn btn-large">Save</button>
           </form>
 
-          <h2 ng-click="edit()">{{name}}</h2>
-          <p>{{points}}</p>
-          <button class="btn" ng-click="addOne()">+1</button>
-          <button class="btn" ng-click="addFive()">+5</button>
-          <button class="btn" ng-click="subtractOne()">-1</button>
-          <button class="btn" ng-click="subtractFive()">-5</button>
+
+          <h1 ng-click="edit()">{{name}}</h2>
+          <h2>{{points}}</h2>
+          <button class="btn btn-large" ng-click="addOne()">+1</button>
+          <button class="btn btn-large" ng-click="addFive()">+5</button>
+          <button class="btn btn-large" ng-click="subtractOne()">-1</button>
+          <button class="btn btn-large" ng-click="subtractFive()">-5</button>
         </div>
 
-        <div ng-controller="PlayerCtrl" class="span5 offset1 player" id="right-player">
+        <div ng-controller="PlayerCtrl" class="span6 player" id="right-player">
 
-          <form ng-show="editing">
+          <img src="./img/player-2.jpg" class="img-rounded">
+
+          <form class="form-inline" ng-show="editing">
             <input type="text" ng-model="name">
-            <button ng-click="save()" class="btn">Save</button>
+            <button ng-click="save()" class="btn btn-large">Save</button>
           </form>
 
-          <h2 ng-click="edit()">{{name}}</h2>
-          <p>{{points}}</p>
-          <button class="btn" ng-click="addOne()">+1</button>
-          <button class="btn" ng-click="addFive()">+5</button>
-          <button class="btn" ng-click="subtractOne()">-1</button>
-          <button class="btn" ng-click="subtractFive()">-5</button>
+
+          <h1 ng-click="edit()">{{name}}</h1>
+          <h2>{{points}}</h2>
+          <button class="btn btn-large btn-success" ng-click="addOne()">+1</button>
+          <button class="btn btn-large btn-success" ng-click="addFive()">+5</button>
+          <button class="btn btn-large btn-danger" ng-click="subtractOne()">-1</button>
+          <button class="btn btn-large btn-danger" ng-click="subtractFive()">-5</button>
         </div>
       </div>
 
       <div class="row-fluid">
         <div class="span12">
-          <button  style="margin-top:2em" class="btn" ng-click="reset()">Reset</button>
+          <button  style="margin-top:2em" class="btn btn-large" ng-click="reset()">Reset</button>
         </div>
       </div>
 
