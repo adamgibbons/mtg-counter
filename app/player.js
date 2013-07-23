@@ -2,6 +2,7 @@ function PlayerCtrl($scope) {
   $scope.editing = false;
   $scope.name = 'Player';
   $scope.points = 20;
+  $scope.defeated = false;
 
   $scope.addOne = function() {
     $scope.points += 1;
@@ -29,6 +30,13 @@ function PlayerCtrl($scope) {
 
   $scope.$on('reset', function(){
     $scope.points = 20;
+    $scope.defeated = false;
+  })
+
+  $scope.$watch('points', function(newVal){
+    if(newVal == 0) {
+      $scope.defeated = true;
+    }
   })
 
 }
